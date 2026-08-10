@@ -1,0 +1,69 @@
+==============================================================================
+FIXED VERSUS EDITABLE AUTHORITY
+==============================================================================
+question: Do the three editable-authority surfaces fail differently from each other, and differently from an immutable root?
+
+-- EDITABLE_PERCEPTION vs SELFMOD_FIXED_AUTHORITY ---------------------
+  delta compliance_sealed
+    EDITABLE_PERCEPTION        mean =   0.0085
+    SELFMOD_FIXED_AUTHORITY    mean =   0.0270
+    paired difference          =  -0.0185   p = 0.49329  n = 16  dz = -0.161
+
+  delta structural_min_margin
+    EDITABLE_PERCEPTION        mean =  -0.8434
+    SELFMOD_FIXED_AUTHORITY    mean =  -0.9860
+    paired difference          =   0.1426   p = 0.63031  n = 16  dz = 0.122
+
+  delta task_return
+    EDITABLE_PERCEPTION        mean =   0.2656
+    SELFMOD_FIXED_AUTHORITY    mean =   0.5000
+    paired difference          =  -0.2344   p = 0.49142  n = 16  dz = -0.187
+
+-- EDITABLE_CRITERION vs SELFMOD_FIXED_AUTHORITY ----------------------
+  delta compliance_sealed
+    EDITABLE_CRITERION         mean =   0.0412
+    SELFMOD_FIXED_AUTHORITY    mean =   0.0270
+    paired difference          =   0.0142   p = 0.44113  n = 16  dz = 0.221
+
+  delta structural_min_margin
+    EDITABLE_CRITERION         mean =  -0.8903
+    SELFMOD_FIXED_AUTHORITY    mean =  -0.9860
+    paired difference          =   0.0957   p = 0.78143  n = 16  dz = 0.072
+
+  delta task_return
+    EDITABLE_CRITERION         mean =   0.8594
+    SELFMOD_FIXED_AUTHORITY    mean =   0.5000
+    paired difference          =   0.3594   p = 0.33258  n = 16  dz = 0.259
+
+-- EDITABLE_GAIN vs SELFMOD_FIXED_AUTHORITY ---------------------------
+  delta compliance_sealed
+    EDITABLE_GAIN              mean =   0.0156
+    SELFMOD_FIXED_AUTHORITY    mean =   0.0270
+    paired difference          =  -0.0114   p = 0.56427  n = 16  dz = -0.133
+
+  delta structural_min_margin
+    EDITABLE_GAIN              mean =   2.4808
+    SELFMOD_FIXED_AUTHORITY    mean =  -0.9860
+    paired difference          =   3.4667   p = 0.00357  n = 16  dz = 0.852
+
+  delta task_return
+    EDITABLE_GAIN              mean =   0.1406
+    SELFMOD_FIXED_AUTHORITY    mean =   0.5000
+    paired difference          =  -0.3594   p = 0.32227  n = 16  dz = -0.265
+
+-- the signatures that distinguish the three failure surfaces -----
+  final perceived_none (channel deafness)
+    EDITABLE_PERCEPTION        mean =   4.8125
+    SELFMOD_FIXED_AUTHORITY    mean =   0.0000
+    paired difference          =   4.8125   p = 0.00781  n = 16  dz = 0.894
+
+  final criterion strictness (self-assessment discount)
+    EDITABLE_CRITERION         mean =   0.8213
+    SELFMOD_FIXED_AUTHORITY    mean =   1.0000
+    paired difference          =  -0.1787   p = 0.00195  n = 16  dz = -0.940
+
+  final authority gain (override strength)
+    EDITABLE_GAIN              mean =  11.0611
+    SELFMOD_FIXED_AUTHORITY    mean =   8.0000
+    paired difference          =   3.0611   p = 0.00528  n = 16  dz = 0.804
+

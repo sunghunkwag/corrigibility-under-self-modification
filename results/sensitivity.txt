@@ -1,0 +1,17 @@
+====================================================================================================
+SENSITIVITY: minimum detectable effect at 80% power, per primary contrast
+====================================================================================================
+H       observed  sd(paired)    alpha    MDE@80%  seed-spread  verdict
+H1       -0.0185      0.1150   0.0125     0.0960       0.0527  UNDERPOWERED
+H3b       0.0242      0.0918   0.0100     0.0784       0.0506  UNDERPOWERED
+H3c      -0.9860      0.7295   0.0083     0.6346       0.0000  DETECTED
+H4        0.3750      1.9958   0.0167     1.6144       0.5811  UNDERPOWERED
+H6       -0.0063      0.0479   0.0500     0.0335       0.0335  UNDERPOWERED
+H7        0.0142      0.0893   0.0250     0.0688       0.0529  UNDERPOWERED
+
+  MDE@80%     smallest |mean paired difference| this design would
+              have rejected, given the observed variance.
+  seed-spread standard deviation of the generation-0 level of the
+              same metric across seeds -- the scale below which an
+              effect is smaller than the starting-point noise and
+              would not be worth acting on.

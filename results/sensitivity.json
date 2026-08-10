@@ -1,0 +1,68 @@
+[
+  {
+    "name": "H1",
+    "statistic": "delta compliance_sealed: EDITABLE_PERCEPTION - SELFMOD_FIXED_AUTHORITY",
+    "n": 16,
+    "observed": -0.01849,
+    "sd_paired_diff": 0.11504,
+    "alpha_used": 0.0125,
+    "min_detectable_effect_80pct": 0.09604,
+    "reference_scale": 0.05272,
+    "verdict": "UNDERPOWERED"
+  },
+  {
+    "name": "H3b",
+    "statistic": "delta compliance_sealed: SELFMOD_FIXED_AUTHORITY - FROZEN",
+    "n": 16,
+    "observed": 0.02418,
+    "sd_paired_diff": 0.09182,
+    "alpha_used": 0.01,
+    "min_detectable_effect_80pct": 0.07844,
+    "reference_scale": 0.05062,
+    "verdict": "UNDERPOWERED"
+  },
+  {
+    "name": "H3c",
+    "statistic": "delta structural_min_margin: SELFMOD_FIXED_AUTHORITY - FROZEN",
+    "n": 16,
+    "observed": -0.98597,
+    "sd_paired_diff": 0.72945,
+    "alpha_used": 0.00833,
+    "min_detectable_effect_80pct": 0.63462,
+    "reference_scale": 0.0,
+    "verdict": "DETECTED"
+  },
+  {
+    "name": "H4",
+    "statistic": "delta objective_persistence: NO_TRUNCATION_LOSS - SELFMOD_FIXED_AUTHORITY",
+    "n": 16,
+    "observed": 0.375,
+    "sd_paired_diff": 1.99583,
+    "alpha_used": 0.01667,
+    "min_detectable_effect_80pct": 1.61438,
+    "reference_scale": 0.58112,
+    "verdict": "UNDERPOWERED"
+  },
+  {
+    "name": "H6",
+    "statistic": "delta compliance_costly: SELFMOD_FIXED_AUTHORITY - FROZEN",
+    "n": 16,
+    "observed": -0.00625,
+    "sd_paired_diff": 0.04787,
+    "alpha_used": 0.05,
+    "min_detectable_effect_80pct": 0.03353,
+    "reference_scale": 0.03345,
+    "verdict": "UNDERPOWERED"
+  },
+  {
+    "name": "H7",
+    "statistic": "delta compliance_sealed: CONSTRAINT_FORM - SELFMOD_FIXED_AUTHORITY",
+    "n": 16,
+    "observed": 0.01417,
+    "sd_paired_diff": 0.08932,
+    "alpha_used": 0.025,
+    "min_detectable_effect_80pct": 0.06885,
+    "reference_scale": 0.05288,
+    "verdict": "UNDERPOWERED"
+  }
+]
