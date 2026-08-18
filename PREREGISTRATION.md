@@ -32,6 +32,32 @@ Hashing the *source* of the compliance predicate and the decision rules, not onl
 their configuration, is deliberate: a silently edited predicate would otherwise
 move every result without moving any recorded parameter.
 
+### What the fingerprint does not establish
+
+`prereg_fp` is a SHA-256 prefix over the pinned object above, which includes the
+source text of the eleven hypothesis decision functions in
+`src/cusm/hypotheses.py` and of `AuthorityRoot.compliant_actions`.
+
+**What it establishes.** The decision rules that produced the verdicts in
+RESULTS.md are the ones hashed here, character for character. Editing a
+predicate, a predicted sign, an α, or a seed range moves the hash and fails
+`ctl_prereg_fp_unchanged`.
+
+**What it does not establish.** When the hash was fixed. A fingerprint shows that
+two objects are identical; it says nothing about which one came first. The date
+at the top of this file — pinned after the sizing pilot and before the reported
+run — rests on nothing but this file asserting it.
+
+**The repository history is a single commit.** There is no commit predating the
+reported run, no tag, and no record of `42a8c37dc4b6e7e7` anywhere outside this
+repository. A reader working from this repository alone cannot verify the
+ordering of preregistration and execution. The preregistration is
+self-certifying, and the hash is evidence of integrity, not of priority.
+
+Future preregistrations will be timestamped externally: the fingerprint
+deposited in a dated record outside this repository before the run it governs is
+executed.
+
 ---
 
 ## 2. What was fixed before any data was collected
