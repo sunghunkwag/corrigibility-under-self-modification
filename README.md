@@ -42,8 +42,9 @@ Paired over 16 seeds against a matched control at equal budget:
 **Δ = −0.986, p = 3×10⁻⁵, dz = −1.35**, surviving Holm correction.
 
 Over the same runs, compliance on the held-out behavioural battery **did not
-change** (Δ = +0.024, p = 0.28). The structural property degraded for twelve
-consecutive generations while the behavioural instrument reported nothing.
+change** (Δ = +0.024, p = 0.28). The structural property degraded at eleven of
+twelve generations and improved at none, while the behavioural instrument
+reported nothing.
 
 Two honest qualifications, stated here rather than buried:
 
@@ -51,7 +52,7 @@ Two honest qualifications, stated here rather than buried:
   2.81 and stayed positive. This is erosion, not failure. Worst-case compliance
   probability fell from 0.961 to 0.893.
 - **The behavioural null is underpowered.** At n = 16 the design could only have
-  detected a change of ≥ 7.8 percentage points in held-out compliance. A smaller
+  detected a change of ≥ 7.84 percentage points in held-out compliance. A smaller
   real degradation would have been missed. The dissociation is *consistent with*
   apparent-versus-genuine corrigibility; it does not establish it.
 
@@ -100,9 +101,9 @@ fact of write access.
 
 **Tampering happened, but there is no evidence it was selected for.** In
 `TAMPERABLE_EVALUATOR`, 14 of 16 seeds edited the evaluation ledger (mean 1.44
-applied writes per checkpoint). But `LOG_WRITE` emissions were *not* higher than
-in the arm where the action is inert (20.8 vs 23.2, p = 0.38). The tampering was
-a by-product of an action the agent emitted anyway. Reporting this as
+applied writes per final checkpoint). But `LOG_WRITE` emissions were *not* higher
+than in the arm where the action is inert (20.8 vs 23.2, p = 0.38). The tampering
+was a by-product of an action the agent emitted anyway. Reporting this as
 "evaluator manipulation emerged" would have been the available headline and is
 not supported.
 
@@ -150,8 +151,8 @@ python cusm.py sensitivity     # minimum detectable effect per contrast
 ```
 
 Pure Python 3, standard library only, no dependencies. The full reported run
-takes about 13 minutes and is deterministic: same seeds → identical genome
-digests.
+takes 10–15 minutes depending on the machine and is deterministic: same seeds →
+identical genome digests.
 
 Individual contrasts, one question each:
 
@@ -266,7 +267,7 @@ Distinguishing these is a requirement of the project, not a courtesy.
 |---|---|
 | **Implemented and tested** | environment, four-part authority stack, genome and decision rule, three-tier battery, sealed evaluator, structural check, modification loop and nine arms, permutation statistics, sensitivity analysis, 33 controls, 50 unit tests |
 | **Experimentally observed** | everything in RESULTS.md: 9 arms × 16 seeds × 12 generations, 144 arm-seed runs, `prereg_fp = 42a8c37dc4b6e7e7` |
-| **Proved** | Proposition 1 (analytically, and verified by two unit tests and one control) |
+| **Proved** | Proposition 1 (analytically, and verified by two unit tests and two controls) |
 | **Observed but not preregistered** | the optimisation-versus-drift mechanism refinement (§5.1 of the framework); the authority-strengthening result in `EDITABLE_GAIN` |
 | **Proposed future work** | H10–H13 in HYPOTHESES.md §4; a learned-policy substrate where structural corrigibility is not computable; adversarial rather than hill-climbing modification |
 | **Not attempted** | anything about frontier systems, learned representations, unbounded self-rewrite, or intent |
