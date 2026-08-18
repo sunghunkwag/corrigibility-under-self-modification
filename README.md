@@ -29,12 +29,13 @@ corrigibility — and a finite behavioural test battery could not see the loss.*
 Over 12 generations of self-modification in which the agent could change only its
 policy, search depth and memory — with the authority root, its perception of
 authority, its compliance criterion and its override strength all immutable — the
-worst-case margin by which the override dominates the policy fell monotonically:
+worst-case margin by which the override dominates the policy fell and never
+recovered:
 
 ```
 generation :   0     2     4     6     8    10    12
 frozen     : 3.80  3.80  3.80  3.80  3.80  3.80  3.80
-self-mod   : 3.80  3.63  3.36  3.21  3.10  3.08  2.81
+self-mod   : 3.80  3.63  3.36  3.21  3.09  3.08  2.81
 ```
 
 Paired over 16 seeds against a matched control at equal budget:
